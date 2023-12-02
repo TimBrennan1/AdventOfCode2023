@@ -13,7 +13,8 @@ import (
 //Only primitive types can be constants
 var reNum = regexp.MustCompile(`[^0-9]+`)
 var reString = regexp.MustCompile(`[^A-Za-z]+`)
-const part = 2;
+// const part = 1;
+ const part = 2;
 
 func main() {
 	t0 := time.Now();
