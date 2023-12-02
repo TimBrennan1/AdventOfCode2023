@@ -8,15 +8,17 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
+	"time"
 )
 	func main(){
+		t0 := time.Now()
 		out, err := NumerizeText()
+		t1 := time.Now();
 		if err != nil{
 			fmt.Print("Yikes")
 		}
 
-		fmt.Printf("Sum: %v", out );
-		
+		fmt.Printf("Sum: %v Duration: %v", out, t1.Sub(t0) );
 	}
 
 	func openFile(in string) (file *os.File, err error){
