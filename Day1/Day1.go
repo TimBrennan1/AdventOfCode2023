@@ -17,8 +17,6 @@ import (
 
 		fmt.Printf("Sum: %v", out );
 		
-		
-
 	}
 
 	func openFile(in string) (file *os.File, err error){
@@ -39,14 +37,11 @@ import (
 		last := string(in[len(in)-1])
 	
 		v, err := strconv.Atoi(first + last)
-		print("after combo ", v ," ")
-		println()
 
 		if err != nil {
 			return 0, err
 		}
 		
-
 		return v, nil;
 
 	}
@@ -63,9 +58,7 @@ import (
 		scanner := bufio.NewScanner(file)
 	
 		for scanner.Scan() {
-			text:= scanner.Text()
-			print("before combo ", text ," ")
-			v := sanitizeInput(text)
+			v := sanitizeInput(scanner.Text())
 			num, err := retriveNumericValue(v)
 	
 			if err != nil {
