@@ -209,7 +209,6 @@ func GetValue2(matrix [][]rune)(value int){
 			if string(matrix[i][j]) == "*"{
 				n1, n2 := CheckNeighbors2(i,j,matrix,nums)
 				if n1 != 0 && n2 !=0{
-					println(n1,n2)
 					value += n1 * n2
 				}
 			}
